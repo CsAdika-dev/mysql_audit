@@ -1,2 +1,0 @@
-- Always output build binaries to the `build/` directory (e.g. `go build -o build/...`).
-- Never place compiled binaries or temporary test artifacts in the repository root.
