@@ -16,7 +16,7 @@ BEGIN
             IF triggerHandler THEN
                 LEAVE triggerLoop;
             END IF;
-            SET @dropTriggerStatement = CONCAT(@dropTriggerStatement,"DROP TRIGGER ", triggerName, ";");
+19 |             SET @dropTriggerStatement = CONCAT('DROP TRIGGER `', triggerName, '`;');
             INSERT INTO ddlTable (command) VALUES (@dropTriggerStatement);
         END LOOP triggerLoop;
         CLOSE triggerCursor;
